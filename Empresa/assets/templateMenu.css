@@ -1,0 +1,25 @@
+.box{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    height:150px;
+    width:400px;
+    padding:50px;
+    background: rgba(0,0,0,.8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.5);
+    border-radius: 10px;
+}
+    
+    
+
+.box a{ 
+    margin-left:3px;
+    position:relative;
+    left:15%;
+    top:-28px;
+    width:200px;
+    margin-bottom: 2%;
+}
+
