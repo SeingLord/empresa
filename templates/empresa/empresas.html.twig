@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="container">
+
+        <div class="col-md-12">
+            {% include "/includes/messagens.html.twig" %}
+
+        </div>
+        <a href="/empresas/create" class="btn btn-large btn-primary" >Criar</a>
+        <table class="table">
+            <tr>
+                <thead>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Opcoes</th>
+                </thead>
+            </tr>
+
+            <tbody>
+            {% for e in empresa %}
+            <tr>
+            <thead>
+                <td><a href="/empresas/edit/{{ e.getId()  }}">{{ e.getNome()}}</a></td>
+
+                <td>{{  e.getEndereco() }}</td>
+                <td>{{ e.getTelefone() }}</td>
+                <td><a href="/empresas/remove/{{e.getId()}}" class="btn btn-primary">Remover</a></td>
+            </thead>
+
+
+            </tr>
+
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+
+{% endblock  %}
